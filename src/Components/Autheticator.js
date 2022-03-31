@@ -6,8 +6,6 @@ export const LoginAuth = ({ children }) => {
   const navigate = useNavigate();
   const userData = useContext(UserContext);
 
-  console.log("authenticator", userData.user.user);
-
   useEffect(() => {
     if (userData.user.user === null) navigate("/login");
   });

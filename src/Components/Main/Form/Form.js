@@ -26,7 +26,6 @@ function Form(props) {
         password,
       }
     );
-    console.log(req.data);
     if (!req.data.status.success) {
       setErrorLogin(true);
       setErrorLoginMessage(req.data.status.message);
