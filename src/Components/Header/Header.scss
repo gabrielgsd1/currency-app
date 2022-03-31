@@ -1,0 +1,46 @@
+@mixin header-flex {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#header-header {
+  @include header-flex;
+  animation: showSmoothHeader 500ms ease-in-out;
+  height: 100%;
+}
+
+@keyframes showSmoothHeader {
+  0% {
+    opacity: 0%;
+    transform: translateX(-10%);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateX(0%);
+  }
+}
+
+.button {
+  border: 0.125rem solid #333;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  background: #eee;
+  cursor: pointer;
+  transition: 250ms ease-in-out;
+  &:hover {
+    transform: translateY(-7%);
+    background-color: #333;
+    color: #eee;
+  }
+}
+
+#two-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.items {
+  @include header-flex;
+}
